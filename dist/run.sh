@@ -14,6 +14,8 @@ report_from_package "Turning off homebrew analytics"
 brew analytics off
 
 # Install Homebrew packages
+# todo: check if array is declared up front!
+# shellcheck disable=SC2154
 for ((i=0; i<${#macup_homebrew_packages[@]}; ++i)); do
 	if brew ls --versions "${macup_homebrew_packages[i]}" >/dev/null; then
 		if (brew outdated | grep "${macup_homebrew_packages[i]}" > /dev/null); then 
