@@ -1,6 +1,6 @@
 # macup-homebrew
 
-A [macup](https://github.com/eeerlend/macup) module that installs Homebrew on your mac.
+A [macup](https://github.com/eeerlend/macup-builder) module that installs Homebrew on your mac.
 
 ## Installation
 Run the following command to add it to your repo
