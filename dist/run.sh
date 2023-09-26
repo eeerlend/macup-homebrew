@@ -18,7 +18,7 @@ function install_or_upgrade_brew_package {
 # shellcheck disable=SC2046
 if [ ! $(command -v brew) ]; then
 	report_from_package "Homebrew is not installed, proceed with installation."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
 	report_from_package "Homebrew already installed, now updating"
 	brew update
