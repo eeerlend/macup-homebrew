@@ -19,6 +19,7 @@ function install_or_upgrade_brew_package {
 if [ ! $(command -v brew) ]; then
 	report_from_package "Homebrew is not installed, proceed with installation."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 else
 	report_from_package "Homebrew already installed, now updating"
 	brew update
